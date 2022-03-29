@@ -1,0 +1,31 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["ola.andersson@ingka.com"]
+description = "Hackaton"
+language = "javascript"
+manifest_version = 2
+name = "fastly-hackaton"
+service_id = ""
+
+[local_server]
+
+  [local_server.backends]
+
+    [local_server.backends.optlycdn]
+      url = "https://cdn.optimizely.com"
+
+    [local_server.backends.optlylogx]
+      url = "https://logx.optimizely.com"
+
+[setup]
+
+  [setup.backends]
+
+    [setup.backends.optlycdn]
+      address = "cdn.optimizely.com"
+      port = 443
+
+    [setup.backends.optlylogx]
+      address = "logx.optimizely.com"
+      port = 443
