@@ -14,7 +14,7 @@ async function handleRequest(event) {
 
   const url = new URL(req.url);
   const pathname = url.pathname;
-  const isCssResource = url.pathname.endsWith('.css'));
+  const isCssResource = url.pathname.endsWith(".css");
 
   if (url.pathname == "/") {
     return new Response(indexPage, {

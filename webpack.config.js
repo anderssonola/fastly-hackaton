@@ -22,10 +22,6 @@ module.exports = {
         test: /\.(css|txt|html)/,
         type: "asset/source",
       },
-      {
-        test: /\.(css)$/,
-        type: "asset/source",
-      },
     ],
   },
   plugins: [
