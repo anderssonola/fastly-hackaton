@@ -22,8 +22,8 @@ body {
 
 html {
   font-family: sans-serif;
-  font-size: 12pt;
-  max-width: 900px;
+  font-size: 0.75rem;
+  max-width: 800px;
   position: relative;
   margin: 0 auto;
 }
@@ -91,9 +91,20 @@ img {
   height: auto;
 }
 
-img[src*=".svg"]:hover {
-  filter: var(--icon-filter_hover);
+.svg-wrapper {
+  width: 100%;
+  aspect-ratio: 3/1;
 }
+
+img[src*=".svg"] {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* img[src*=".svg"]:hover {
+  filter: var(--icon-filter_hover);
+} */
 
 /* dark-mode-toggle {
   --dark-mode-toggle-light-icon: url(https://googlechromelabs.github.io/dark-mode-toggle/demo/moon.png);
